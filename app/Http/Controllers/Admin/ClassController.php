@@ -18,6 +18,7 @@ class ClassController extends Controller
 		$db=DB::table('goodsclass');
 		//查询数据库 取出upidwei0的数据
 		// dd($r->input('soutypename'));
+		$array[]=array();
 		$where[]=array();
 		if($r->has('soutypename')){
 			$soutypename=$r->input('soutypename');
@@ -132,6 +133,11 @@ class ClassController extends Controller
 			$path=$ppath.','.$id;
 			//修改此类别的path字段的值
 			DB::table('goodsclass')->where('id','=',$id)->update(['path'=>$path]);
+			if(session()->get('son'))
+			{
+				session()->forget('son');
+				return redirect('admin/goodsclass');
+			}
 			$msg=Session()->set('typeerror','添加成功');
 			return back();
 			exit;

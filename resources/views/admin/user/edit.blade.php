@@ -62,7 +62,7 @@
                       <div class="form-group ">
                         <label for="inputusername" class="col-sm-2 control-label">用户名</label>
                         <div class="col-sm-5">
-                          <input type="text" class="form-control" id="inputusername" placeholder="用户名" value='{{$ob->username}}' name='username'>
+                          <input type="text" class="form-control" id="inputusername" placeholder="用户名" value='{{$ob->username}}' name='username' disabled>
                         </div>
                       </div>
 

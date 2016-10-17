@@ -51,6 +51,7 @@
                       <th>封面图</th>
                       <th>商品单价</th>
                       <th>图书状态</th>
+                      <th>特惠情况</th>
                       <th>添加时间</th>
                       <th>操作</th>
                     </tr>
@@ -63,9 +64,24 @@
               <img src='{{asset("$goods->goods_photo")}}' class="img-circle" alt="User Image" style="width:40px">
             </div></td>
                       <td>
-                        {{ $goods->goods_price }}
+                          @if($goods->discount!=0)
+                            <?php  echo $goods->goods_price*($goods->discount*0.1)?>
+                          @else
+                           {{ $goods->goods_price }}
+                        @endif
                       </td>
                       <td><?php echo (($goods->goods_ground)=='1')?'已上架':'已下架';?></td>
+                      <td>
+                        @if($goods->discount!=0)
+                              {{$goods->discount}}折
+                          @endif
+                          @if($goods->postage!=0)
+                                | 包邮
+                            @endif
+                          @if($goods->new!=0)
+                                | 新品
+                            @endif
+                      </td>
                       <td>{{$goods->addtime}}</td>
                       <td>
                       <a class="btn btn-xs-1 btn-warning" href='{{URL("admin/goods/version/$goods->id")}}'>版本</a>

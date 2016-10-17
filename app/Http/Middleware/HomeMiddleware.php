@@ -16,8 +16,8 @@ class HomeMiddleware
     public function handle($request, Closure $next)
     {
 
-        if(empty(session()->get('user'))){
-                return redirect('login');
+        if(empty(session()->get('homeuser'))){
+                return redirect('home/login');
         }
 
         return $next($request);

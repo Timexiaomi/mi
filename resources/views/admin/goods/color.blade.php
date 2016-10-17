@@ -25,13 +25,17 @@
                   <h3 class="box-title">色彩</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" action='{{URL("admin/version/color")}}' method="post">
+                <form role="form" action='{{URL("admin/version/color/{$gd->id}")}}' method="post">
                 <input type="hidden" name='_token' value='{{csrf_token()}}'>
-                <input type="hidden" name='gdid' value='{{$gd->id}}'>
+                <!-- <input type="hidden" name='gdid' value='{{$gd->id}}'> -->
                   <div class="box-body">
                     <div class="form-group col-md-6">
                       <label for="exampleInputcolor">色彩名</label>
                       <input type="text" class="form-control" id="exampleInputcolor" placeholder="请输入色彩名" name='gdcolor'>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="exampleInputretail">库存数</label>
+                      <input type="text" class="form-control" id="exampleInputretail" placeholder="请输入库存数" name='retail'>
                     </div>
 
                   </div><!-- /.box-body -->

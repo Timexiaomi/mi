@@ -72,9 +72,9 @@
                       <td><?php echo (($user->power)==1)?'用户':'管理员';?></td>
                       <td>
                         @if($user->status==1)
-                            <a class="btn btn-xs-1 btn-danger" id='down' href='{{URL("admin/down/{$user->id}")}}' >关闭</a>
+                            <a class="btn btn-xs-1 btn-danger"  href='{{URL("admin/dodown/{$user->id}")}}'  >关闭</a>
                         @else
-                        <a class="btn btn-xs-1 btn-success" id='open' href='{{URL("admin/open/{$user->id}")}}'>开启</a>
+                           <a class="btn btn-xs-1 btn-success"  href='{{URL("admin/doopen/{$user->id}")}}'  >开启</a>
                     @endif
 
                       </td>
@@ -115,6 +115,8 @@
                 form.submit();
               }
             }
+
+
 
           </script>
 @endsection

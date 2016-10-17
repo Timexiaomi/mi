@@ -1,34 +1,52 @@
 
-@extends("home/base/base");
-
+@extends("home/base/base")
+@section('title')
+    小米商城
+@endsection
 @section('content')
 <script src="Homes/home/js/base.min.js"></script>
 
 <div class="home-hero-container container">
     <div class="home-hero">
         <div class="home-hero-slider">
-         <div class="ui-wrapper" style="max-width: 100%;"><div class="ui-viewport" style="width: 100%; overflow: hidden; position: relative; height: 460px;"><div id="J_homeSlider" class="xm-slider" data-stat-title="焦点图轮播" style="width: auto; position: relative;">
+         <div class="ui-wrapper" style="max-width: 100%;">
+         <div class="ui-viewport" style="width: 100%; overflow: hidden; position: relative; height: 460px;">
+         <div id="J_homeSlider" class="xm-slider" data-stat-title="焦点图轮播" style="width: auto; position: relative;">
 
                     <div class="slide loaded" style="float: none; list-style: outside none none; position: absolute; width: 1226px; z-index: 0; display: none;">
-                        <a href="mi5.html" data-stat-aid="AA13709" data-stat-pid="2_15_1_67" target="_top" data-stat-id="AA13709+2_15_1_67" onclick="_msq.push(['trackEvent', '79fe2eae924d2a2e-AA13709+2_15_1_67', '//item.mi.com/buyphone/mi5', 'pcpid']);" indepth="true"><img src="6a66563625ae4c1684350badf70fbd28.gif" srcset="http://i3.mifile.cn/a4/0701fec9-c8b3-46a1-8b1c-54b65d261f42 2x"></a>
+                        <a href="mi5.html" ><img src="{{asset('Homes/home/picture/1.jpg')}}"></a>
                     </div>
 
-                    <div class="slide loaded" data-bg-set="{'img':'http://i3.mifile.cn/a4/16631a6b-7f4a-4ca1-bb70-dae1702a4522','imgHd':'http://i3.mifile.cn/a4/085692d7-d1dd-40de-86a7-4a683d117b99'}" style="float: none; list-style: outside none none; position: absolute; width: 1226px; z-index: 50; display: block;">
-                        <a href="mi5s.html" data-stat-aid="AA13701" data-stat-pid="2_15_2_68" target="_top" data-stat-id="AA13701+2_15_2_68" onclick="_msq.push(['trackEvent', '79fe2eae924d2a2e-AA13701+2_15_2_68', '//www.mi.com/mi5s', 'pcpid']);" indepth="true"><img src="Homes/home/Picture/5ee09922-333b-40cd-bf40-792d743419fa.jpg" srcset="http://i3.mifile.cn/a4/085692d7-d1dd-40de-86a7-4a683d117b99 2x"></a>
+                    <div class="slide loaded"  style="float: none; list-style: outside none none; position: absolute; width: 1226px; z-index: 50; display: none;">
+                        <a href="mi5s.html" ><img src="{{asset('Homes/home/picture/2.jpg')}}" ></a>
                     </div>
 
-                    <div class="slide loaded" data-bg-set="{'img':'http://i3.mifile.cn/a4/5ee09922-333b-40cd-bf40-792d743419fa','imgHd':'http://i3.mifile.cn/a4/d3f0d7f6-b5f2-4a30-9525-4b2552b035d7'}" style="float: none; list-style: outside none none; position: absolute; width: 1226px; z-index: 0; display: none;">
-                        <a href="default_032.html" data-stat-aid="AA13699" data-stat-pid="2_15_3_69" target="_top" data-stat-id="AA13699+2_15_3_69" onclick="_msq.push(['trackEvent', '79fe2eae924d2a2e-AA13699+2_15_3_69', '//www.mi.com/mitv3s/65flat/', 'pcpid']);" indepth="true"><img src="16631a6b-7f4a-4ca1-bb70-dae1702a4522.jpg" srcset="http://i3.mifile.cn/a4/d3f0d7f6-b5f2-4a30-9525-4b2552b035d7 2x"></a>
+                    <div class="slide loaded"  style="float: none; list-style: outside none none; position: absolute; width: 1226px; z-index: 0; display: none;">
+                        <a href="default_032.html" ><img src="{{asset('Homes/home/picture/3.jpg')}}" ></a>
                     </div>
 
-                    <div class="slide loaded" data-bg-set="{'img':'http://i3.mifile.cn/a4/079c2de5-93e1-4aa7-82d1-447f29113f46','imgHd':'http://i3.mifile.cn/a4/d6e63e22-1a77-4e47-b6f6-747fb7b3b92e'}" style="float: none; list-style: outside none none; position: absolute; width: 1226px; z-index: 0; display: none;">
-                        <a href="mi5splus.html" data-stat-aid="AA13702" data-stat-pid="2_15_4_70" target="_top" data-stat-id="AA13702+2_15_4_70" onclick="_msq.push(['trackEvent', '79fe2eae924d2a2e-AA13702+2_15_4_70', '//item.mi.com/buyphone/mi5splus', 'pcpid']);" indepth="true"><img src="079c2de5-93e1-4aa7-82d1-447f29113f46" srcset="http://i3.mifile.cn/a4/d6e63e22-1a77-4e47-b6f6-747fb7b3b92e 2x"></a>
+                    <div class="slide loaded"  style="float: none; list-style: outside none none; position: absolute; width: 1226px; z-index: 0; display: none;">
+                        <a href="mi5splus.html" ><img src="{{asset('Homes/home/picture/4.jpg')}}" ></a>
                     </div>
 
-                    <div class="slide loaded" data-bg-set="{'img':'http://i3.mifile.cn/a4/365fb3f2-4df4-40eb-81cf-05e5d1fb1d9b','imgHd':'http://i3.mifile.cn/a4/4d608782-5102-4319-8316-70f5d9fd638a'}" style="float: none; list-style: outside none none; position: absolute; width: 1226px; z-index: 0; display: none;">
-                        <a href="note3.html" data-stat-aid="AA13688" data-stat-pid="2_15_5_71" target="_top" data-stat-id="AA13688+2_15_5_71" onclick="_msq.push(['trackEvent', '79fe2eae924d2a2e-AA13688+2_15_5_71', '//item.mi.com/buyphone/note3', 'pcpid']);" indepth="true"><img src="365fb3f2-4df4-40eb-81cf-05e5d1fb1d9b" srcset="http://i3.mifile.cn/a4/4d608782-5102-4319-8316-70f5d9fd638a 2x"></a>
-                    </div>
-                                        </div></div><div class="ui-controls ui-has-pager ui-has-controls-direction"><div class="ui-pager ui-default-pager"><div class="ui-pager-item"><a href="index.html" data-slide-index="0" class="ui-pager-link" data-stat-id="595e98d16a606864" onclick="_msq.push(['trackEvent', '79fe2eae924d2a2e-595e98d16a606864', '', 'pcpid']);" indepth="true">1</a></div><div class="ui-pager-item"><a href="index.html" data-slide-index="1" class="ui-pager-link active" data-stat-id="ea946571fc362fc3" onclick="_msq.push(['trackEvent', '79fe2eae924d2a2e-ea946571fc362fc3', '', 'pcpid']);" indepth="true">2</a></div><div class="ui-pager-item"><a href="index.html" data-slide-index="2" class="ui-pager-link" data-stat-id="25a5fc3227c3a90a" onclick="_msq.push(['trackEvent', '79fe2eae924d2a2e-25a5fc3227c3a90a', '', 'pcpid']);" indepth="true">3</a></div><div class="ui-pager-item"><a href="index.html" data-slide-index="3" class="ui-pager-link" data-stat-id="2aff13f70cc3f3b0" onclick="_msq.push(['trackEvent', '79fe2eae924d2a2e-2aff13f70cc3f3b0', '', 'pcpid']);" indepth="true">4</a></div><div class="ui-pager-item"><a href="index.html" data-slide-index="4" class="ui-pager-link" data-stat-id="2f44bc37533c9a35" onclick="_msq.push(['trackEvent', '79fe2eae924d2a2e-2f44bc37533c9a35', '', 'pcpid']);" indepth="true">5</a></div></div><div class="ui-controls-direction"><a class="ui-prev" href="index.html" data-stat-id="76844b8f89037755" onclick="_msq.push(['trackEvent', '79fe2eae924d2a2e-76844b8f89037755', '', 'pcpid']);" indepth="true">上一张</a><a class="ui-next" href="index.html" data-stat-id="2f67a19a4f208791" onclick="_msq.push(['trackEvent', '79fe2eae924d2a2e-2f67a19a4f208791', '', 'pcpid']);" indepth="true">下一张</a></div></div></div>
+
+                        </div>
+                        </div><div class="ui-controls ui-has-pager ui-has-controls-direction"><div class="ui-pager ui-default-pager">
+
+                                        <div class="ui-pager-item"><a href="index.html" >1</a></div>
+                                        <div class="ui-pager-item"><a href="index.html" >2</a></div>
+                                        <div class="ui-pager-item"><a href="index.html" >3</a></div>
+                                        <div class="ui-pager-item"><a href="index.html" >4</a></div>
+
+
+
+                                        </div>
+
+
+
+                                        <div class="ui-controls-direction">
+                                        <a class="ui-prev" href="ijavascript:void(0)">上一张</a>
+                                        <a class="ui-next" href="index.html">下一张</a></div></div></div>
 
                                         </div>
 
@@ -208,5 +226,60 @@
         <div class="loading"><div class="loader"></div></div>
     </div>
 </div>
+
+<script>
+                $(function(){
+                                //轮播图像个数
+                                var num= $(".slide").length;
+                                          $(".ui-pager-item");
+                                var m=1;
+                                for(var i=1;i<num;i++){
+                                    (function(i){
+                                            $(".slide").eq(i).mouseover(function(){
+                                                contrimg(i);
+                                                contrico(i);
+                                                m=i+1;
+                                            })(i)
+                                    })
+
+                                }
+                                $('.ui-prev').click(function(){
+                                        contrimg(m-1);
+                                })
+
+                                function run(){
+                                        if(m>(num-1)){
+                                                m=0;
+                                        }
+                                        contrimg(m);
+                                        contrico(m);
+                                        m++;
+                                }
+                                function contrimg(n){
+                                        for(var i=0;i<num;i++){
+                                                $('.slide').eq(i).css('display','none');
+                                        }
+                                        $('.slide').eq(n).css('display','block').fadeIn(1000);
+                                }
+                                function contrico(n){
+                                        for(var i=0;i<num;i++){
+                                                $('.ui-page-item a').eq(i).removeClass('active');
+                                        }
+                                        $('.ui-page-item a').eq(n).addClass('active');
+                                }
+                                $('.home-hero-slider').mouseover(function(){
+                                        clearInterval(time);
+                                })
+                                $('.home-hero-slider').mouseout(function(){
+                                         time=setInterval(run,3000);
+                                });
+                })
+
+
+
+
+
+</script>
+
 
 @endsection

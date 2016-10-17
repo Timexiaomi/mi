@@ -10,6 +10,7 @@
 <link type="text/css" rel="stylesheet" href="{{ asset('Homes/home/css/layout.css') }}">
 
 		<link type="text/css" rel="stylesheet" href="{{ asset('Homes/home/css/registerpwd.css') }}">
+   <link rel="shortcut icon" href="{{asset('Homes/home/image/favicon.ico')}}" />
 <style>
 .facebook_area{
   display:none!important;
@@ -17,7 +18,7 @@
 </style>
 </head>
 <!-- 验证用户名是否符合的js -->
-<script type="text/javascript" src="{{ asset('Public/jquery-1.8.3.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('Public/js.js') }}"></script>
 <script type='text/javascript'>
     $(function()
     {
@@ -114,9 +115,8 @@
       });
     });
 </script>
+
 <body class="zh_CN">
-<form action="{{ URL('/home/doregi') }}" method='post'>
-<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 <div class="wrapper">
 <div class="wrap">
 <div class="layout">
@@ -131,6 +131,8 @@
 </div>
 
 </div>
+<form action="{{ URL('/home/doregi') }}" method='post'>
+<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
     <div class="inputbg">
       <label class="labelbox" for="">
         <input id='username' name="name" autofocus placeholder="请输入用户名" type="tel"><span style='color:green' id='ruleuser'>请输入6-12位的账号，字母开头</span>

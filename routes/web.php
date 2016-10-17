@@ -34,8 +34,8 @@ Route::group(["prefix"=>"admin","middleware"=>"user"],function(){
     //上传用户头像
     Route::post('/user/photo/{id}',"Admin\UserController@photo");
     //设置用户开关
-   Route::get("/down/{id}","Admin\UserController@down");
-   Route::get("/open/{id}","Admin\UserController@open");
+   Route::get("/dodown/{id}","Admin\UserController@down");
+   Route::get("/doopen/{id}","Admin\UserController@open");
 
    //商品
    Route::resource("goods","Admin\GoodsController");//商品管理
@@ -46,13 +46,15 @@ Route::group(["prefix"=>"admin","middleware"=>"user"],function(){
    //商品版本管理
    Route::get('goods/version/{id}','Admin\GoodsController@version');
    //添加商品版本
-   Route::post('goods/doversion/{id}',"Admin\GoodsController@doversion");
+   Route::post('goods/doversion',"Admin\GoodsController@doversion");
+   //修改商品版本
+   Route::post('goods/updateversion/{id}',"Admin\GoodsController@updateversion");
    //版本色彩
    Route::get('version/color/{id}','Admin\GoodsController@color');
    //添加版本色彩
    Route::post('version/color/{id}',"Admin\GoodsController@docolor");
-
-   Route::post('version/cccc/',"Admin\GoodsController@change");
+   //获取版本信息的
+   Route::get('version/change',"Admin\GoodsController@change");
        //商品类别
     Route::resource("goodsclass","Admin\ClassController");//商品类别信息管理
     //添加商品子类别
@@ -61,11 +63,38 @@ Route::group(["prefix"=>"admin","middleware"=>"user"],function(){
     Route::get('/select/type',"Admin\ClassController@selectType");
     //添加子类别的ajax
     // Route::post('/addsontype',"Admin\ClassController@addsontype");
-    //执行删除的ajax
+    //执行类别删除的ajax
     Route::post('ajax/del',"Admin\ClassController@del");
+    //前台模块头部商品
+    Route::get('template/top',"Admin\TemplateController@top");
+
+
 
 });
 Route::get('/aa/1',"Admin\ClassController@del");
+
+
+
+
+
+
+
+//前台需要登录的页面
+Route::group(["prefix"=>"home","middleware"=>"home"],function(){
+
+//订单确认页
+Route::get('home/order','Home\IndexController@order');
+
+//支付页面
+Route::get('home/pay','Home\IndexController@pay');
+
+//用户信息页面
+Route::get('home/user','Home\IndexController@user');
+
+});
+
+
+//不需要登录的页面
 
 //前台主页
 Route::get('/home/index','Home\IndexController@index');
@@ -92,8 +121,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home/head','Home\IndexController@head');
 
+//商品选择页面
+Route::get('home/goodsmessage','Home\IndexController@goodsmessage');
 
+//购物车页面
+Route::get('home/cart','Home\IndexController@cart');
+
+//搜索页面
+Route::get('home/search','Home\IndexController@search');
 
 
 
